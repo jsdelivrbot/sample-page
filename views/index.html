@@ -5,16 +5,36 @@
   <link rel=stylesheet href=https://rawgit.com/digplan/enigmatic.js/master/css.css />
   <link rel=stylesheet href=//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css />
   <script src=https://rawgit.com/digplan/enigmatic.js/master/enigmatic.js ></script>
+  <script src=https://rawgit.com/digplan/enigmatic.js/master/controls/router.js ></script>
+  <script src=menu.js ></script>
   <script src=userlogin.js ></script>
 </head>
 
 <i id=login class='ion-person thirty' style='float:right; margin-right:40px'></i>
 <userlogin id=user style='float:right; margin-right:40px' control hidden>
   <span>${name}</span> 
-  <img style='height:30px; border-radius: 20px; transform: translateY(25%)' src=# > <i id=logout class='ion-close-round red'></i>
+  <img style='height:30px; border-radius: 20px; transform: translateY(25%)' src=# > <br> 
+  <div id=userprefs><i id=settings class='ion-navicon-round'></i> <i id=logout class='ion-close-round red push-one'></i></div>
 </userlogin>
 
+<router id=myrouter >
+  <view id=loggedout class='eighty center-screen ion-coffee'> dom</view>
+  <view id=home hidden>
+    <a href=# id=btn onclick='mymenu.toggle()'>Toggle menu</a>
+    <menu id=mymenu for=btn control>
+      <li onclick="alert(1)">Alert One</li>
+      <li onclick="alert(2)">Alert Two</li>
+      <li onclick="alert(3)">Alert Three</li>
+      <li onclick="alert(4)">Alert Four</li>
+    </menu>
+  </view>
+  <view id=settings hidden>
+    settings
+  </view>
+</router>
 <script>
-
-
+  document.onlogin = ()=>{
+    enig.router(myrouter);
+    myrouter.route('home');
+  };
 </script>

@@ -1,4 +1,20 @@
 <!DOCTYPE html>
-<link rel=stylesheet href=https://rawgit.com/digplan/enigmatic.js/master/css.css >
+<head>
+  <script src="https://cdn.auth0.com/js/lock/10.6/lock.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel=stylesheet href=https://rawgit.com/digplan/enigmatic.js/master/css.css />
+  <link rel=stylesheet href=//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css />
+  <script src=https://rawgit.com/digplan/enigmatic.js/master/enigmatic.js ></script>
+  <script src=userlogin.js ></script>
+</head>
 
-<div class=fifty>Hi there {name}</div>
+<i id=login class='ion-person thirty' style='float:right; margin-right:40px'></i>
+<userlogin id=user style='float:right; margin-right:40px' control hidden>
+  <span>${name}</span> 
+  <img style='height:30px; border-radius: 20px; transform: translateY(25%)' src=# > <i id=logout class='ion-close-round red'></i>
+</userlogin>
+
+<script>
+
+
+</script>

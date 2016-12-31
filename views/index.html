@@ -12,13 +12,13 @@
 
 <i id=login class='ion-person thirty' style='float:right; margin-right:40px'></i>
 <userlogin id=user style='float:right; margin-right:40px' control hidden>
-  <span>${name}</span> 
+  <span style='cursor:default'>${name}</span> 
   <img style='height:30px; border-radius: 20px; transform: translateY(25%)' src=# > <br> 
-  <div id=userprefs><i id=settings class='ion-navicon-round'></i> <i id=logout class='ion-close-round red push-one'></i></div>
+  <div id=userprefs style='margin-left:30px'><i id=settings class='ion-navicon-round'></i> <i id=logout class='ion-close-round red push-one'></i></div>
 </userlogin>
 
 <router id=myrouter >
-  <view id=loggedout class='eighty center-screen ion-coffee'> dom</view>
+  <view id=loggedout class='eighty center-screen ion-coffee'> digplan</view>
   <view id=home hidden>
     <a href=# id=btn onclick='mymenu.toggle()'>Toggle menu</a>
     <menu id=mymenu for=btn control>

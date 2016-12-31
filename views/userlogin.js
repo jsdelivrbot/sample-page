@@ -18,7 +18,15 @@
     var user = localStorage.getItem('user');
     if(!user){
       login.hidden = false; userprefs.hidden = true;
-      var lock = new Auth0Lock('fBLesHV6GaLAbGs0ajbJEAT6KtdTfm8c', 'digplan.auth0.com');
+      var lock = new Auth0Lock('fBLesHV6GaLAbGs0ajbJEAT6KtdTfm8c', 'digplan.auth0.com', {
+        theme: {
+          primaryColor: '#3A99D8',
+          logo:''
+        },
+        languageDictionary: {
+          title: 'Distant Greetings'
+        }
+      });
       login.addEventListener('click', ()=>lock.show());
       login.hidden = false;
       lock.on("authenticated", (authResult) => {

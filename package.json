@@ -12,7 +12,7 @@
 	"dependencies": {
 		"express": "^4.14.0",
 		"anti-db": "^1.0.0",
-		"string-template":""
+		"string-template": "^1.0.0"
 	},
 	"engines": {
 		"node": "6.9.1"

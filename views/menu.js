@@ -11,7 +11,7 @@ enig.menu = (e) => {
           max-width: 300px;
           list-style: none;
           padding: 10px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.0);
           cursor: arrow;
           text-decoration: none;
           display: relative;
